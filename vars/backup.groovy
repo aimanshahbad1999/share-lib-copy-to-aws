@@ -2,6 +2,7 @@
 def call(){
 
     node{
+        stages{
         stage('Pull From Github'){
             git branch: 'main', credentialsId: 'cfdbf68d-a49e-4901-bbc2-2273836adfa1', url: 'https://github.com/aimanshahbad1999/python-git.git'
         }
@@ -18,5 +19,6 @@ def call(){
                 aws s3 cp PythonBackup.txt s3://pythonfilebackup/python.txt
                 '''
         }
+    }
     }
 }
