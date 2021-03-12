@@ -14,8 +14,8 @@ def call(){
         }
         stage('Backup to AWS s3'){
             sh '''
-                export AWS_ACCESS_KEY_ID=AKIA52S3JMKJC35LHP5H
-                export AWS_SECRET_ACCESS_KEY=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
+                export AWS_ACCESS_KEY_ID=
+                export AWS_SECRET_ACCESS_KEY=
                 aws s3 cp PythonBackup.txt s3://pythonfilebackup/python.txt
                 '''
         }
